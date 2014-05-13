@@ -1,10 +1,21 @@
 @font-face {
-    font-family: 'engravers_mtregular';
-    src: url('/fonts/engr-webfont.eot');
-    src: url('/fonts/engr-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/engr-webfont.woff') format('woff'),
-         url('/fonts/engr-webfont.ttf') format('truetype'),
-         url('/fonts/engr-webfont.svg#engravers_mtregular') format('svg');
+    font-family: 'walterturncoat';
+    src: url('/fonts/walterturncoat-regular-webfont.eot');
+    src: url('/fonts/walterturncoat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/walterturncoat-regular-webfont.woff') format('woff'),
+         url('/fonts/walterturncoat-regular-webfont.ttf') format('truetype'),
+         url('/fonts/walterturncoat-regular-webfont.svg#walterturncoat') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'kidprint';
+    src: url('/fonts/kidprint-regular-webfont.eot');
+    src: url('/fonts/kidprint-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/kidprint-regular-webfont.woff') format('woff'),
+         url('/fonts/kidprint-regular-webfont.ttf') format('truetype'),
+         url('/fonts/kidprint-regular-webfont.svg#kidprint') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -286,8 +297,12 @@ input[type="checkbox"], input[type="radio"] {
   // display: none;
 }
 
+body {
+  font-family: 'kidprint', 'Helvetica', Arial, sans-serif;
+  font-size: 18px;
+}
 h1, h2, h3, h4, h5 {
-  font-family: 'engravers_mtregular', 'Helvetica', Arial, sans-serif;
+  font-family: 'walterturncoat', 'Helvetica', Arial, sans-serif;
   letter-spacing:2px;
 }
 
