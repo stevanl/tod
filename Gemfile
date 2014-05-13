@@ -22,6 +22,8 @@ gem 'modernizr-rails'
 # Stylesheet libs
 gem 'blueprint-rails'
 
+gem 'country-select'
+
 gem 'execjs'
 gem 'therubyracer'
 
