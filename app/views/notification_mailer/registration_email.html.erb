@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1><%= @person.name %> has registered.</h1>
+    <table>
+      <tr>
+        <th colspan="2">Driver 1</th>
+      </tr>
+      <tr>
+        <th>Name:</th>
+        <td><%= @person.name %></td>
+      </tr>
+      <tr>
+        <th>Company:</th>
+        <td><%= @person.company %></td>
+      </tr>
+      <tr>
+        <th>Address 1:</th>
+        <td><%= @person.address_line_1 %></td>
+      </tr>
+      <tr>
+        <th>Address 2:</th>
+        <td><%= @person.address_line_2 %></td>
+      </tr>
+      <tr>
+        <th>City:</th>
+        <td><%= @person.city %></td>
+      </tr>
+      <tr>
+        <th>Postcode:</th>
+        <td><%= @person.postcode %></td>
+      </tr>
+      <tr>
+        <th>Country:</th>
+        <td><%= @person.country %></td>
+      </tr>
+      <tr>
+        <th>Telephone:</th>
+        <td><%= @person.telephone %></td>
+      </tr>
+      <tr>
+        <th>Email:</th>
+        <td><%= @person.email %></td>
+      </tr>
+      <tr>
+        <th colspan="2">Driver 2</th>
+      </tr>
+      <tr>
+        <th>Co-Driver Name:</th>
+        <td><%= @person.co_driver_name %></td>
+      </tr>
+      <tr>
+        <th>Co-Driver Company:</th>
+        <td><%= @person.co_driver_company %></td>
+      </tr>
+      <tr>
+        <th>Co-Driver Address:</th>
+        <td><%= @person.co_driver_address_line_1 %></td>
+      </tr>
+      <tr>
+        <th>Co-Driver Address:</th>
+        <td><%= @person.co_driver_address_line_2 %></td>
+      </tr>
+      <tr>
+        <th>Co-Driver City:</th>
+        <td><%= @person.co_driver_city %></td>
+      </tr>
+      <tr>
+        <th>Co-Driver Postcode:</th>
+        <td><%= @person.co_driver_postcode %></td>
+      </tr>
+      <tr>
+        <th>Co-Driver Country:</th>
+        <td><%= @person.co_driver_country %></td>
+      </tr>
+      <tr>
+        <th>Co-Driver Email:</th>
+        <td><%= @person.co_driver_email %></td>
+      </tr>
+      <tr>
+        <th>Co-Driver Telephone:</th>
+        <td><%= @person.co_driver_telephone %></td>
+      </tr>
+      <tr>
+        <th colspan="2">Room Supplements</th>
+      </tr>
+      <tr>
+        <th>Single Room?:</th>
+        <td><%= @person.sup_single_room %></td>
+      </tr>
+      <tr>
+        <th>Junior suite?:</th>
+        <td><%= @person.sup_junior_suite %></td>
+      </tr>
+      <tr>
+        <th>Superior Room:</th>
+        <td><%= @person.sup_superior_room %></td>
+      </tr>
+      <tr>
+        <th>Junior Prestige Room:</th>
+        <td><%= @person.sup_junior_prestige_suite %></td>
+      </tr>
+      <tr>
+        <th>Suite:</th>
+        <td><%= @person.sup_suite %></td>
+      </tr>
+      <tr>
+        <th>Penthouse:</th>
+        <td><%= @person.sup_penthouse %></td>
+      </tr>
+      <tr>
+        <th colspan="2">Car Supplements</th>
+      </tr>
+      <tr>
+        <th>Own car?:</th>
+        <td><%= @person.sup_own_car %></td>
+      </tr>
+      <tr>
+        <th>Video highlights:</th>
+        <td><%= @person.sup_car_video_highlights %></td>
+      </tr>
+      <tr>
+        <th>Exceptional Car List:</th>
+        <td><%= @person.sup_supercar %></td>
+      </tr>
+      <tr>
+        <th colspan="2">Payment</th>
+      </tr>
+      <tr>
+        <th>Payment:</th>
+        <td><%= @person.payment %></td>
+      </tr>
+      <tr>
+        <th>Amount:</th>
+        <td><%= @person.amount %></td>
+      </tr>
+      <tr>
+        <th>Comments:</th>
+        <td><%= raw @person.comments %></td>
+      </tr>
+    </table>
+  </body>
+</html>
