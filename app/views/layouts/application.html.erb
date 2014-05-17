@@ -18,14 +18,6 @@
   <%= stylesheet_link_tag "application" %>
   <%= csrf_meta_tags %>
   <%= javascript_include_tag "modernizr" %>
-  <script type="text/javascript">
-    jQuery(function($){
-      $.supersized({
-        image_protect: true,
-        slides  :   [ {image : '/images/background/background.jpg', title : 'Image Credit: Jam Events'} ]
-      });
-    });
-  </script>
 <link href='http://fonts.googleapis.com/css?family=Questrial|Tenor+Sans|Ovo|Antic|Lancelot|Linden+Hill' rel='stylesheet' type='text/css'>
 
 </head>
@@ -46,7 +38,7 @@
 </div>
 <div id="footer">
   <div class="footer">
-    <span style="top: 5px"><%= link_to image_tag('/images/footer-cr-logo.png', :alt => "Visit the Chana Rally website", :height => '25'), "http://www.chana.org.uk", :title => "Visit the Chana Rally website" %></span><span>23 Ravenshurst Avenue, London, NW4 4EE</span> <span>Tel: 020 8203 8455</span> <span>email: <a href="mailto:info@chana.org.uk">info@chana.org.uk</a></span><span>UK Charity Number: 1070196</span><span style="position:absolute;right:0;top: 15px"><%= link_to image_tag('/images/footer-jam-logo.png', :alt => "Visit Jam Events", :height => '25'), "http://www.jam-events.com", :title => "Visit Jam-Events" %></span>
+    <span>The Palace Suite, Hilton London Metropole, 225 Edgware Road, W2 1JU</span><span>UK Charity Number: 1125487</span><span style="position:absolute;right:0;top: 5px"><%= link_to image_tag('/images/footer-jam-logo.png', :alt => "Visit Jam Events", :height => '25'), "http://www.jam-events.com", :title => "Visit Jam-Events" %></span>
   </div><!-- /footer -->
 </div><!-- /footer -->
 

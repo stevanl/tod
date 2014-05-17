@@ -20,6 +20,10 @@
     font-style: normal;
 }
 
+html {
+  background: url("/images/background/cover-pattern.png") repeat;
+}
+
 body, li {
   color: #333;
 }
@@ -298,11 +302,11 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 body {
-  font-family: 'kidprint', 'Helvetica', Arial, sans-serif;
+  font-family: 'Coming Soon', 'Helvetica', Arial, sans-serif;
   font-size: 18px;
 }
 h1, h2, h3, h4, h5 {
-  font-family: 'walterturncoat', 'Helvetica', Arial, sans-serif;
+  font-family: 'Permanent Marker', 'Helvetica', Arial, sans-serif;
   letter-spacing:2px;
 }
 
