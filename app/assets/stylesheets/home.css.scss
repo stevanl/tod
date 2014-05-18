@@ -32,6 +32,9 @@ li {
   font-size: 14px;
 }
 
+.tilt, .tiltright {
+  margin-bottom: 30px;
+}
 .tilt {
   transform: rotate(359deg);
   -webkit-transform: rotate(359deg);
