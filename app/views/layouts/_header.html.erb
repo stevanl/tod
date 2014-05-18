@@ -8,7 +8,6 @@
           <li class="<%= "active" if params[:action] == 'index' %>"> <%= link_to 'Home', root_path %> </li>
           <li class="<%= "active" if params[:action] == 'dinner' %>"> <%= link_to 'Gala Dinner', dinner_path %> </li>
           <li class="<%= "active" if params[:action] == 'new' && params[:controller] == 'replies' %>"><%= link_to 'Reply', new_reply_path %></li>
-          <li class="<%= "active" if params[:action] == 'new' && params[:controller] == 'dedications' %>"><%= link_to 'Dedication List', new_dedication_path %></li>
           <li class="<%= "active" if params[:action] == 'new' && params[:controller] == 'brochures' %>"><%= link_to 'Brochure', new_brochure_path %></li>
         </ul>
       </div>

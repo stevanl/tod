@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111124111848) do
+ActiveRecord::Schema.define(:version => 20141705152301) do
 
   create_table "brochures", :force => true do |t|
     t.string   "advert"
@@ -25,86 +25,22 @@ ActiveRecord::Schema.define(:version => 20111124111848) do
     t.string   "payment"
     t.string   "amount"
     t.text     "advertising_copy"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
-  create_table "nominations", :force => true do |t|
+  create_table "replies", :force => true do |t|
     t.string   "name"
-    t.string   "company"
-    t.string   "address_1"
-    t.string   "address_2"
-    t.string   "postcode"
-    t.string   "telephone"
-    t.string   "email"
-    t.string   "website"
-    t.string   "category"
-    t.boolean  "notified_company"
-    t.string   "nom_name"
-    t.string   "nom_address_1"
-    t.string   "nom_address_2"
-    t.string   "nom_postcode"
-    t.string   "nom_telephone"
-    t.string   "nom_email"
-    t.text     "reason"
-    t.text     "hear_about"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "registrations", :force => true do |t|
-    t.string   "name"
-    t.string   "company"
     t.string   "address_line_1"
     t.string   "address_line_2"
     t.string   "city"
     t.string   "postcode"
-    t.string   "country"
     t.string   "telephone"
     t.string   "email"
-    t.string   "co_driver"
-    t.string   "payment"
-    t.boolean  "sup_single_room"
-    t.boolean  "sup_junior_suite"
-    t.boolean  "sup_exceptional_car"
-    t.boolean  "sup_own_car"
-    t.string   "sup_tshirt"
-    t.text     "comments"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "rsvps", :force => true do |t|
-    t.integer  "number_of_people"
-    t.boolean  "attendance"
-    t.string   "donation"
-    t.string   "name"
-    t.string   "name_2"
-    t.string   "company"
-    t.string   "address_1"
-    t.string   "address_2"
-    t.string   "postcode"
-    t.string   "telephone"
-    t.string   "email"
-    t.string   "payment"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "table_bookings", :force => true do |t|
-    t.integer  "tables"
-    t.integer  "corporate_packages"
-    t.integer  "gold_packages"
-    t.string   "name"
-    t.string   "company"
-    t.string   "address_1"
-    t.string   "address_2"
-    t.string   "postcode"
-    t.string   "telephone"
-    t.string   "email"
-    t.string   "payment"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "attendance"
+    t.string   "donation_amount"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end
