@@ -40,6 +40,14 @@ li {
   -ms-transform: rotate(359deg);
 }
 
+.tiltright {
+  transform: rotate(1deg);
+  -webkit-transform: rotate(1deg);
+  -moz-transform: rotate(1deg);
+  -o-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+}
+
 #shell {
   margin: 0 auto;
   width: 980px;
@@ -51,7 +59,7 @@ li {
 .nav-top {
   position:relative;
   .pills {
-    width: 760px;
+    width: 525px;
     margin: 0 auto;
     margin-bottom: 0;
     li {
@@ -286,7 +294,8 @@ table tr + tr td {
 #nav-box.fixed {
   position: fixed;
   top: 0;
-  background: url('/images/parchment_980px.jpg') no-repeat;
+  // background: url('/images/parchment_980px.jpg') no-repeat;
+  background: #fff;
   @include box-shadow;
 }
 .theme-default .nivo-controlNav {
