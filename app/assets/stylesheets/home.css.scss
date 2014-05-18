@@ -27,6 +27,19 @@ html {
 body, li {
   color: #333;
 }
+
+li {
+  font-size: 14px;
+}
+
+.tilt {
+  transform: rotate(359deg);
+  -webkit-transform: rotate(359deg);
+  -moz-transform: rotate(359deg);
+  -o-transform: rotate(359deg);
+  -ms-transform: rotate(359deg);
+}
+
 #shell {
   margin: 0 auto;
   width: 980px;
@@ -277,7 +290,7 @@ table tr + tr td {
   @include box-shadow;
 }
 .theme-default .nivo-controlNav {
-  left: 37%;
+  left: 32%;
 }
 
 input[type="checkbox"], input[type="radio"] {
@@ -308,6 +321,10 @@ body {
 h1, h2, h3, h4, h5 {
   font-family: 'Permanent Marker', 'Helvetica', Arial, sans-serif;
   letter-spacing:2px;
+}
+
+h2 {
+  font-size: 20px;
 }
 
 .sponsorhead {
