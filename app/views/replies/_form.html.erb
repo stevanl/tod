@@ -4,7 +4,7 @@
     <h2>Reply Slip</h2>
     <div class="input">
       <%= f.input :attendance, :collection => [
-        ['Will Attend (£180)', " I/We will be able to attend the Beis Yaakov Dinner and enclose a suggested voluntary donation of £180 per couple"],
+        ['Will Attend (£180)', " I/We will be able to attend the Beis Yaakov Dinner and enclose a suggested voluntary donation of* £180 per couple"],
         ['Will Attend (£?)', ' I/We will be unable to attend the Beis Yaakov Dinner but enclose a donation specified below']
       ], :as => :radio, :item_wrapper_tag => :li, :collection_wrapper_tag => :ul, :label_method => :last, :value_method => :first, :wrapper_html => { :class => "inputs-list" } %>
       <span class="lbl long"><div class="card strong"><dl><dt>Account Name</dt><dd>BEIS YAAKOV PRIMARY SCHOOL FUNCTIONS ACCOUNT</dd><dt>Bank:</dt><dd>HSBC, MUSWELL HILL BRANCH</dd><dt>Sort Code:</dt><dd>40-04-37</dd><dt>Account Number:</dt><dd>31637940</dd><dt>Ref:</dt><dd>Please provide invoice number</dd></dl></div></span>
@@ -14,6 +14,7 @@
     <h2>Personal Details</h2>
   </div>
   <div class="clearfix"><%= f.input :name %></div>
+  <div class="clearfix"><%= f.input :no_guests, label: "Number of guests", input_html: {class: "span1", maxlength: "2"} %></div>
   <div class="clearfix"><%= f.input :address_line_1 %></div>
   <div class="clearfix"><%= f.input :address_line_2 %></div>
   <div class="clearfix"><%= f.input :city %></div>
@@ -29,7 +30,9 @@
 </fieldset>
 
 <% end %>
-<div class="alert-message block-message warning contactme">
+<div class="alert-message block-message warning">
+  <p>Please reply by Monday 2nd June 2014. You can also reply by email to dinner@beisyaakov.org. To pay by credit card, please complete the payment section on the enclosed brochure form or call 020 8371 9080.</p>
+  <p>*Please make cheques / vouchers payable to Beis Yaakov Primary School Foundation (or B.Y.P.S. Foundation) Registered Charity Number 1125487</p>
   <p>If you have any queries please email <a href="mailto:desi@jam-events.com">desi@jam-events.com</a> or call <strong>020 8371 9080</strong></p>
 </div>
 
@@ -37,6 +40,6 @@
 <script>
 
 $(function(){
-  $('label[for="reply_attendance_will_attend_"]').html(' I/We will be unable to attend the Beis Yaakov Dinner but enclose a donation of: <input class="string optional span2" id="reply_donation_amount" maxlength="255" name="reply[donation_amount]" size="50" type="text">');
+  $('label[for="reply_attendance_will_attend_"]').html(' I/We will be unable to attend the Beis Yaakov Dinner but enclose a donation of*: <input class="string optional span2" id="reply_donation_amount" maxlength="255" name="reply[donation_amount]" size="50" type="text">');
 });
 </script>
