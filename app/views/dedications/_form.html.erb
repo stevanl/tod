@@ -1,0 +1,38 @@
+<%= simple_form_for(@dedication) do |f| %>
+  <%= f.error_notification %>
+
+<fieldset>
+  <div class="clearfix">
+    <h2>Dedication Details</h2>
+    <p>Please select your choice of dedication</p>
+  </div>
+  <div class="clearfix">
+    <div class="input">
+      <%= f.input :dedication, :collection => [
+        ['Builing and Name', ' Building & Name (£300,000)'],
+        ['School Hall', ' School Hall (£150,000)'],
+        ['Playground', ' Playground (£50,000)'],
+        ['Classroom', ' Classroom (8 Available. Includes Platinum page in Brochure) (£7,500)'],
+        ['Interactive Whiteboard', ' Interactive Whiteboard (8 Available. Includes Diamond page in Brochure) (£5,000)'],
+        ['Mezuzos', ' Mezuzos (Includes a Full page in Brochure) (£750)']
+        ], :as => :radio, :item_wrapper_tag => :li, :collection_wrapper_tag => :ul, :label_method => :last, :value_method => :first, :wrapper_html => { :class => "inputs-list" } %>
+      <span class="lbl long"><div class="card strong"><dl><dt>Account Name</dt><dd>BEIS YAAKOV PRIMARY SCHOOL FUNCTIONS ACCOUNT</dd><dt>Bank:</dt><dd>HSBC, MUSWELL HILL BRANCH</dd><dt>Sort Code:</dt><dd>40-04-37</dd><dt>Account Number:</dt><dd>31637940</dd><dt>Ref:</dt><dd>Please provide invoice number</dd></dl></div></span>
+    </div>
+  </div>
+  <div class="clearfix">
+    <h2>Personal Details</h2>
+  </div>
+  <div class="clearfix"><%= f.input :name %></div>
+  <div class="clearfix"><%= f.input :company, label: "Company/Charity" %></div>
+  <div class="clearfix"><%= f.input :address_line_1 %></div>
+  <div class="clearfix"><%= f.input :address_line_2 %></div>
+  <div class="clearfix"><%= f.input :city %></div>
+  <div class="clearfix"><%= f.input :postcode %></div>
+  <div class="clearfix"><%= f.input :telephone %></div>
+  <div class="clearfix"><%= f.input :email %></div>
+  <div class="clearfix">
+    <div class="input button">
+      <%= f.button :submit, :class => "btn large", :value => "Submit Dedication Form" %>
+    </div>
+  </div>
+<% end %>

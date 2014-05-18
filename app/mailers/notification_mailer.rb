@@ -8,4 +8,8 @@ class NotificationMailer < ActionMailer::Base
     @person = person
     mail(:to => ['mark@jam-events.com', 'desi@jam-events.com'], :bcc => 'stevan@mycurrencytransfer.com', :subject => "BYPS: New Reply Submitted")
   end
+  def dedication_email(person)
+    @person = person
+    mail(:to => ['mark@jam-events.com', 'desi@jam-events.com'], :bcc => 'stevan@mycurrencytransfer.com', :subject => "BYPS: New Dedication Submitted")
+  end
 end
