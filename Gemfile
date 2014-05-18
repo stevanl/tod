@@ -7,8 +7,9 @@ gem 'mysql2'
 gem 'simple_form', '1.5.2'
 gem 'haml'
 
+gem 'sass-rails',   '~> 3.2.6'
+
 group :assets do
-  gem 'sass-rails',   '~> 3.2.6'
   gem 'coffee-rails', '~> 3.2.2'
   gem 'uglifier',     '>= 1.0.3'
 end
