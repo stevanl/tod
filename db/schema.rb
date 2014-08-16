@@ -25,14 +25,14 @@ ActiveRecord::Schema.define(:version => 20141705152304) do
     t.string   "payment"
     t.string   "amount"
     t.text     "advertising_copy"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.string   "payment_phone"
     t.string   "cc_number"
     t.string   "cc_start_date"
     t.string   "cc_expiry_date"
     t.string   "cc_issue_no"
     t.string   "cc_cvv"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
   end
 
   create_table "dedications", :force => true do |t|
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20141705152304) do
     t.string   "company"
     t.string   "address_line_1"
     t.string   "address_line_2"
+    t.string   "city"
     t.string   "postcode"
     t.string   "telephone"
     t.string   "email"
@@ -58,9 +59,9 @@ ActiveRecord::Schema.define(:version => 20141705152304) do
     t.string   "email"
     t.string   "attendance"
     t.string   "donation_amount"
-    t.string   "no_guests"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.string   "no_guests"
   end
 
 end

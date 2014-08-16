@@ -1,7 +1,7 @@
-set :application, "bypsdinner"
+set :application, "theonedinner"
 set :user, "deploy"
-set :domain, "bypsdinner.com"
-set :repository,  "git@github.com:stevanl/jbd.git"
+set :domain, "theonedinner.com"
+set :repository,  "git@github.com:stevanl/tod.git"
 set :repository_cache, "git_master"
 set :use_sudo, false
 set :deploy_via, :remote_cache
@@ -23,9 +23,9 @@ task :l do
   set :deploy_to, "/home/deploy/#{application}/live"
 end
 
-role :app, "bypsdinner.com"
-role :web, "bypsdinner.com"
-role :db,  "bypsdinner.com", :primary => true
+role :app, "theonedinner.com"
+role :web, "theonedinner.com"
+role :db,  "theonedinner.com", :primary => true
 
 after "deploy:update_code", "deploy:copy_config_files"
 
