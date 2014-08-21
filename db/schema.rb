@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141705152304) do
+ActiveRecord::Schema.define(:version => 20141705152306) do
 
   create_table "brochures", :force => true do |t|
     t.string   "advert"
@@ -62,6 +62,12 @@ ActiveRecord::Schema.define(:version => 20141705152304) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.string   "no_guests"
+    t.string   "cc_number"
+    t.string   "cc_start_date"
+    t.string   "cc_expiry_date"
+    t.string   "cc_issue_no"
+    t.string   "cc_cvv"
+    t.string   "payment"
   end
 
 end
