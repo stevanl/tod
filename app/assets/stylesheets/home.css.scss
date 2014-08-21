@@ -1,27 +1,53 @@
 @font-face {
-    font-family: 'walterturncoat';
-    src: url('/fonts/walterturncoat-regular-webfont.eot');
-    src: url('/fonts/walterturncoat-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/walterturncoat-regular-webfont.woff') format('woff'),
-         url('/fonts/walterturncoat-regular-webfont.ttf') format('truetype'),
-         url('/fonts/walterturncoat-regular-webfont.svg#walterturncoat') format('svg');
+    font-family: 'alegreyasans-light';
+    src: url('/fonts/alegreyasans-light-webfont.eot');
+    src: url('/fonts/alegreyasans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/alegreyasans-light-webfont.woff') format('woff'),
+         url('/fonts/alegreyasans-light-webfont.ttf') format('truetype'),
+         url('/fonts/alegreyasans-light-webfont.svg#alegreyasans') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'kidprint';
-    src: url('/fonts/kidprint-regular-webfont.eot');
-    src: url('/fonts/kidprint-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/kidprint-regular-webfont.woff') format('woff'),
-         url('/fonts/kidprint-regular-webfont.ttf') format('truetype'),
-         url('/fonts/kidprint-regular-webfont.svg#kidprint') format('svg');
+    font-family: 'alegreyasans-regular';
+    src: url('/fonts/alegreyasans-regular-webfont.eot');
+    src: url('/fonts/alegreyasans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/alegreyasans-regular-webfont.woff') format('woff'),
+         url('/fonts/alegreyasans-regular-webfont.ttf') format('truetype'),
+         url('/fonts/alegreyasans-regular-webfont.svg#alegreyasans') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'alegreyasans-medium';
+    src: url('/fonts/alegreyasans-medium-webfont.eot');
+    src: url('/fonts/alegreyasans-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/alegreyasans-medium-webfont.woff') format('woff'),
+         url('/fonts/alegreyasans-medium-webfont.ttf') format('truetype'),
+         url('/fonts/alegreyasans-medium-webfont.svg#alegreyasans') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'alegreyasans-bold';
+    src: url('/fonts/alegreyasans-bold-webfont.eot');
+    src: url('/fonts/alegreyasans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/alegreyasans-bold-webfont.woff') format('woff'),
+         url('/fonts/alegreyasans-bold-webfont.ttf') format('truetype'),
+         url('/fonts/alegreyasans-bold-webfont.svg#alegreyasans') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 html {
-  background: url("/images/background/cover-pattern.png") repeat;
+  background: url("/images/background/cover-pattern.png") no-repeat center bottom fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 body, li {
@@ -32,6 +58,11 @@ li {
   font-size: 14px;
 }
 
+p {
+  font-size: 15px;
+  line-height: 24px;
+}
+/*
 .tilt, .tiltright {
   margin-bottom: 30px;
 }
@@ -50,12 +81,12 @@ li {
   -o-transform: rotate(1deg);
   -ms-transform: rotate(1deg);
 }
-
+*/
 #shell {
   margin: 0 auto;
   width: 980px;
   // background: $white;
-  background: url("/images/bg-top.png"), url("/images/bg-mid.png");
+  // background: url("/images/bg-top.png"), url("/images/bg-mid.png");
   background-repeat: no-repeat, repeat-y;
   @include box-shadow(0 2px 10px rgba(0,0,0,0.25));
 }
@@ -327,11 +358,11 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 body {
-  font-family: 'Coming Soon', 'Helvetica', Arial, sans-serif;
+  font-family: 'alegreyasans-regular', 'Helvetica', Arial, sans-serif;
   font-size: 18px;
 }
 h1, h2, h3, h4, h5 {
-  font-family: 'Permanent Marker', 'Helvetica', Arial, sans-serif;
+  font-family: 'alegreyasans-bold', 'Helvetica', Arial, sans-serif;
   letter-spacing:2px;
 }
 

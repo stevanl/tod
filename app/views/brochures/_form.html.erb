@@ -9,15 +9,15 @@
   <div class="clearfix">
     <div class="input">
       <%= f.input :advert, :collection => [
-        ['Patron Page', ' Patron Page (£18,000)'],
-        ['Sponsor Page', ' Sponsor Page (£10,000)'],
-        ['Platinum Page', ' Platinum Page (£5,000)'],
-        ['Diamond Page', ' Diamond Page (£2,500)'],
-        ['Gold Page', ' Gold Page (£1,500)'],
-        ['Silver Page', ' Silver Page (£1,000)'],
-        ['Full Page', ' Full Page (£500)'],
-        ['Half Page', ' Half Page (£250)'],
-        ['Quarter Page', ' Quarter Page (£150)']
+        ['Brochure Sponsor', ' Brochure Sponsor (£15,000)'],
+        ['Back Cover', ' Back Cover (£5,000)'],
+        ['Inside Front Cover', ' Inside Front Cover (£5,000)'],
+        ['Platinum Page', ' Platinum Page (£3,500)'],
+        ['Gold Page', ' Gold Page (£2,500)'],
+        ['Silver Page', ' Silver Page (£1,500)'],
+        ['Full Page', ' Full Page (£1,000)'],
+        ['Half Page', ' Half Page (£500)'],
+        ['Quarter Page', ' Quarter Page (£250)']
       ], :as => :radio, :item_wrapper_tag => :li, :collection_wrapper_tag => :ul, :label_method => :last, :value_method => :first, :wrapper_html => { :class => "inputs-list" } %>
       <p>Further sponsorship opportunities available upon request</p>
     </div>
@@ -27,7 +27,7 @@
     <h2>Personal Details</h2>
   </div>
   <div class="clearfix"><%= f.input :name %></div>
-  <div class="clearfix"><%= f.input :company, label: "Company/Charity" %></div>
+  <div class="clearfix"><%= f.input :company, label: "Company/Charitable Trust " %></div>
   <div class="clearfix"><%= f.input :address_line_1 %></div>
   <div class="clearfix"><%= f.input :address_line_2 %></div>
   <div class="clearfix"><%= f.input :postcode %></div>
@@ -40,12 +40,12 @@
   <div class="clearfix">
     <div class="input">
       <%= f.input :payment, :collection => [
-        ['Invoice', ' I require an invoice'],
-        ['Receipt', ' I require a charity voucher or gift aid receipt'],
-        ['Phone', ' Please phone me on to take a credit card payment or provide details below'],
+        ['Cheque', ' I enclose a cheque'],
         ['Credit Card', ' Credit Card Payment / Credit Card Type'],
-        ['BACS', ' I will make a BACS payment']], :as => :radio, :item_wrapper_tag => :li, :collection_wrapper_tag => :ul, :label_method => :last, :value_method => :first, :wrapper_html => { :class => "inputs-list" } %>
-      <span class="lbl long"><div class="card strong"><dl><dt>Account Name</dt><dd>BEIS YAAKOV PRIMARY SCHOOL FUNCTIONS ACCOUNT</dd><dt>Bank:</dt><dd>HSBC, MUSWELL HILL BRANCH</dd><dt>Sort Code:</dt><dd>40-04-37</dd><dt>Account Number:</dt><dd>31637940</dd><dt>Ref:</dt><dd>Please provide invoice number</dd></dl></div></span>
+        ['Invoice', ' I require an invoice'],
+        ['BACS', ' I will make a BACS payment'],
+        ], :as => :radio, :item_wrapper_tag => :li, :collection_wrapper_tag => :ul, :label_method => :last, :value_method => :first, :wrapper_html => { :class => "inputs-list" } %>
+      <span class="lbl long"><div class="card strong"><dl><dt>Account Name</dt><dd>Chabad Lubavitch Development Fund</dd><dt>Bank:</dt><dd>Barclays</dd><dt>Sort Code:</dt><dd>67-77-20</dd><dt>Account Number:</dt><dd>60343757</dd><dt>Ref:</dt><dd>Please provide your name</dd></dl></div></span>
     </div>
   </div>
   <div class="clearfix">
@@ -54,7 +54,9 @@
   </div>
   <div class="clearfix">
     <%= f.input :advertising_copy %>
-    <span class="help-block offset2">Alternatively, please supply artwork to <a href="mailto:desi@jam-events.com">desi@jam-events.com</a>. Full page and above 128 x 190 mm / Half page 128 x 92.5 mm. Quarter page 61.5 x 92.5 mm. PDF (images 300dpi, fonts converted to outlines or supplied) or 300dpi JPEG. Please supply all logos as vector eps or pdf, or high resolution JPG. Word files will be reset. Kindly return this form by Monday 2nd June 2014. Please email if you would like assistance with the wording.</span>
+    <span class="help-block offset2">Alternatively, please supply print optimised PDF (with fonts converted to outlines or embedded /images in 300dpi) or 300dpi JPEG to <a href="mailto:desi@jam-events.com">desi@jam-events.com</a>. Kindly return this form by 12<sup>th</sup> September 2014 to: Chabad Lubavitch UK c/o Jam Events, 314 Regents Park Road, London N3 2JX Tel: 020 8371 9080 Fax: 020 8346 1881
+
+    </span>
   </div>
 
   <div class="clearfix">
@@ -67,7 +69,7 @@
 <script>
 
 $(function(){
-  $('label[for="brochure_payment_phone"]').html(' Please phone me on <input class="string optional span2" id="brochure_payment_phone" maxlength="255" name="brochure[payment_phone]" size="50" type="text"> to take a credit card payment or provide details below');
+  $('label[for="brochure_payment_cheque"]').html(' I enclose a cheque<br><small>Payable to <strong>Chabad Lubavitch UK</strong> and sent <br><strong>c/o Jam Events, 314 Regents Park Road, London N3 2JX</strong></small>');
   $('label[for="brochure_payment_credit_card"]').html(' Credit Card Payment / Credit Card Type to take a credit card payment or provide details below:<br>Card number: <input class="string optional span3" id="brochure_cc_number" maxlength="255" name="brochure[cc_number]" type="text"><br>Start date: <input class="string optional span1" id="brochure_cc_start_date" maxlength="255" name="brochure[cc_start_date]" type="text"> Expiry date: <input class="string optional span1" id="brochure_cc_expiry_date" maxlength="255" name="brochure[cc_expiry_date]" type="text"> Issue Num: <input class="string optional span1" id="brochure_cc_issue_no" maxlength="255" name="brochure[cc_issue_no]" type="text"> CVV: <input class="string optional span1" id="brochure_cc_cvv" maxlength="255" name="brochure[cc_cvv]" type="text">');
   $('label[for="brochure_payment"]').hide();
   $('label[for="brochure_advert"]').hide();
